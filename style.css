@@ -40,13 +40,17 @@ body {
     align-items: center;
     /* posiciona sobre otros elementos, pero solo funciona a elementos con posicionamiento top left etc */
     z-index: 100;  
-    background: rgba(109, 109, 109, 0.5);
+    background: transparent;  
+    transition: background-color 0.5s ease;  
+}
+.header:hover{    
+    background-color: rgba(7, 7, 7, 0.5);
 }
 
 .navbar a {
     position: relative;
     font-size: 20px;
-    color: #e4e4e4;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 900;
     margin-right: 15px;
@@ -59,7 +63,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #e4e4e4;
+    background: #ffffff;
     border-radius: 5px;
     transform: translateY(10px);
     opacity: 0;
@@ -148,10 +152,15 @@ body {
     top: 0;
     right: 0;    
     width: calc(43%);
-    height: 100%; 
-    background-color: rgba(111, 235, 193,0.5);  
+    height: 100%;      
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    background: transparent;  
+    transition: background-color 0.5s ease; 
+}
+
+.logreg-box:hover{
+    background-color: rgba(111, 235, 193,0.5); 
 }
 
 .logo{
@@ -186,8 +195,31 @@ body {
 }
 
 /* selecciona a todos los elementos hijo i, que son hijos directos del elemento a */
-.social-icons a:hover i{
+.social-icons :hover i{
     transform: scale(1.8);    
+    /* transform: rotate(45deg); */
+}
+
+.content .logo-cat{
+    display: flex;               
+}
+
+/* .content .logo-cat h2{    
+    border: 2px solid black;  
+} */
+
+.content .logo-cat h2 i{       
+    color: #fff;
+    transition: 3s ease;    
+    height: 100%;
+    padding-right: 15px;
+}
+
+.logo-cat :hover i{
+    translate: 7rem;    
+    background: rgba(77, 77, 77, 0.5);  
+    border-radius: 20px;
+    
 }
 
 
